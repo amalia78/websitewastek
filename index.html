@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Peta Statigrafi Tanah</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+       .modal-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .modal-content {
+      background-color: white;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body class="bg-[#DDE6EE]">
+    <div class="flex items-center justify-center h-screen w-full p-5">
+      <div id="map" class="h-[95%] w-[95%] rounded-xl shadow-2xl"></div>
+    </div>
+    <div id="myModal" class="modal ">
+      <div id="modalContent" class="modal-content ">
+        <div class="modal-header flex items-center justify-between">
+          <h2 class="modal-title antialiased tracking-tight font-poppins text-xl">Berikut data dari setiap titik pengujian:</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body mt-6">
+          <table id="tableData" class="w-full font-poppins rounded-xl">
+          </table>
+        </div>
+      </div>
+        <div id="modalData">
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
